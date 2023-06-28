@@ -1,4 +1,3 @@
-import {notion_client} from "../../client";
 import {queryPageId} from "../../api/v1/public";
 
 const TypeData  = (response: string | any[]) =>{
@@ -163,6 +162,7 @@ const QueryAllCourse = async (response: { results: string | any[];}) =>{
     for (let course_length = 0; course_length < response.results.length; course_length++) {
         let typeData = response.results[course_length].properties.Type.multi_select
         let TypeList = TypeData(typeData)
+        console.log(response.results[course_length].properties.Img.files[0].file)
         let course_info =
             {
                 id:    response.results[course_length].properties.ID.number,
@@ -222,6 +222,7 @@ const QueryCourseData = async (response: { results: string | any[]; },id: string
             // @ts-ignore
             let CourseDataPageId = await response.results[i].properties.Course_data.relation
             let Course_list = await CourseData(CourseDataPageId)
+
 
 
             let course_info =

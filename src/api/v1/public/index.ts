@@ -1,6 +1,6 @@
 import {Client} from "@notionhq/client";
 
-const auth = "secret_sX8nm3y3BpOOGd1RbrCBWVm8bBJs6JzpwNZqwOfG5oA"
+const auth = "secret_r4n8miWzLPAd9hb24ZkJxRQtlNPhHlyDtJktfb6rQei"
 
 const  queryPageId =async (pageId: string) =>{
 
